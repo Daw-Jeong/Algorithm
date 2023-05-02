@@ -5,9 +5,7 @@ class Solution {
         long sum = 0;
         for (int i : num_list) {
             multiplication *= i;
-        }
-        for (int l : num_list) {
-            sum += l;
+            sum += i;
         }
         
         return multiplication < sum*sum ? 1 : 0;
