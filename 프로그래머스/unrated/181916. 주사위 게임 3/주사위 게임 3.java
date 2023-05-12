@@ -57,21 +57,21 @@ class Solution {
         }
         
         
-        else return Arrays.stream(intArr).min().getAsInt();
+        else return Math.min(Math.min(a,b), Math.min(c,d));
         
     }
         
 
         
-        private static int threeSame(int x, int y, int z, int m) {
+        int threeSame(int x, int y, int z, int m) {
             return (10 * x + m)*(10 * x + m);
         }
         
-        private static int eachTwoSame(int x, int y) {
+        int eachTwoSame(int x, int y) {
             return (x + y) * Math.abs(x - y);
         }
         
-        private static int justTwoSame(int x, int y) {
+        int justTwoSame(int x, int y) {
             return x * y;
         }
         
