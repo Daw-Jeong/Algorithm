@@ -1,11 +1,13 @@
 from collections import Counter
 def solution(array):
     while len(array) != 0:
-        if len(array) == 1:
-            return array[0]
+        # if len(array) == 1:
+        #     return array[0]
         for idx, val in enumerate(set(array)):
             array.remove(val)
-
+        # for entry in enumerate(array):
+        #     print(entry)
+        if idx == 0: return val
         
     return -1
     
