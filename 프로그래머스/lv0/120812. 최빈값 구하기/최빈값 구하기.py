@@ -5,6 +5,7 @@ def solution(array):
             return array[0]
         for idx, val in enumerate(set(array)):
             array.remove(val)
+
         
     return -1
     
