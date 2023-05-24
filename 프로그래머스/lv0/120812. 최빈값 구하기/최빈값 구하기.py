@@ -1,11 +1,21 @@
 from collections import Counter
 def solution(array):
-    cnt = Counter(array).most_common()
-    if len(cnt) == 1:
-        return cnt[0][0]
-    if cnt[0][1] == cnt[1][1]:
-        return -1
-    return cnt[0][0]
+    while len(array) != 0:
+        if len(array) == 1:
+            return array[0]
+        for idx, val in enumerate(set(array)):
+            array.remove(val)
+        
+    return -1
+    
+    
+    # cnt = Counter(array).most_common()
+    # print(cnt)
+    # if len(cnt) == 1:
+    #     return cnt[0][0]
+    # if cnt[0][1] == cnt[1][1]:
+    #     return -1
+    # return cnt[0][0]
     
     
 #     array.sort()
