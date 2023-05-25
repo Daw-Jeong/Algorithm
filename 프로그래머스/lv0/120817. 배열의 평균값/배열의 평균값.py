@@ -1,5 +1,6 @@
 def solution(numbers):
-    sum = 0
-    for i in numbers:
-        sum += i
-    return sum / len(numbers)
+    # sum = 0
+    # for i in numbers:
+    #     sum += i
+    # return sum / len(numbers)
+    return sum(numbers) / len(numbers)
