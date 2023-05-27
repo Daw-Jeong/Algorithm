@@ -1,6 +1,8 @@
 def solution(my_string, letter):
     
-    return my_string.replace(letter, '')
+    return ''.join(i for i in my_string if i != letter)
+    
+    # return my_string.replace(letter, '')
     
     # answer = ''
     # for i in range(len(my_string)):
