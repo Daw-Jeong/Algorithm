@@ -1,12 +1,14 @@
 def solution(n):
-    answer = []
+#     answer = []
     
-    for i in range(1,int(n ** 0.5)+1):
-        if n % i == 0:
-            answer.append(i)
-            if i == n//i: continue
-            answer.append(n//i)
+#     for i in range(1,int(n ** 0.5)+1):
+#         if n % i == 0:
+#             answer.append(i)
+#             if i == n//i: continue
+#             answer.append(n//i)
             
-    answer.sort()
+#     answer.sort()
     
-    return answer
+#     return answer
+
+    return [i for i in range(1, n + 1) if n % i == 0]
