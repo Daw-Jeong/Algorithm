@@ -5,8 +5,8 @@ def solution(n):
     #0,1은 소수 아니니 False 할당
     is_prime[0], is_prime[1] = False, False
     
-    # n의 제곱근까지 범위 내에 소수 찾기
-    for i in range(2, int(n ** 0.5) + 1):
+    # 범위 내에 소수 찾기
+    for i in range(2, n + 1):
         
         # 2부터 자기 자신 제외한 배수 False 할당
         if is_prime[i] == True:
