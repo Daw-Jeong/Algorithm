@@ -10,8 +10,8 @@ def solution(n):
             #     li.append(i)
         else:
             i += 1
-    answer = dict.fromkeys(li)
-    return list(answer)
+    
+    return sorted(list(set(li)))
 
 #     #n 이하 소수 인덱스에 True인 리스트 만들기 위해 0~n인덱스 True 리스트 초기 선언
 #     is_prime= [True for i in range(n + 1)]
