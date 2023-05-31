@@ -5,12 +5,13 @@ def solution(n):
     while n >= i:
         if n % i == 0:
             n /= i
-            if i not in li:
-                li.append(i)
+            li.append(i)
+            # if i not in li:
+            #     li.append(i)
         else:
             i += 1
-    
-    return li
+    answer = dict.fromkeys(li)
+    return list(answer)
 
 #     #n 이하 소수 인덱스에 True인 리스트 만들기 위해 0~n인덱스 True 리스트 초기 선언
 #     is_prime= [True for i in range(n + 1)]
