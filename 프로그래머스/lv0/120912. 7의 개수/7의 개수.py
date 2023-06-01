@@ -1,4 +1,3 @@
 def solution(array):
-    temp = list(str(array))
 
-    return temp.count('7')
+    return str(array).count('7')
