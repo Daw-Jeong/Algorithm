@@ -25,15 +25,7 @@ def solution(today, terms, privacies):
         else: dueD -= 1
         
         #월+(약관에 해당하는 기간) 해서 if > 12 하면 -12 * n 해주고 년 += n
-#         if dueM + termsdic[priv] > 12:
-#             dueY += (dueM + termsdic[priv]) // 12
-#             dueM = (dueM + termsdic[priv]) % 12
-
-#             if dueM == 0:
-#                 dueM = 12
-
-#         else: dueM += termsdic[priv]
-        
+        # Y 에서 -1 해주는 이유는 12 // 12 는 1이 되어서 1 더해지니까 -1 해주고 해야 13부터 +1 해준다 
         if (dueM + termsdic[priv]) % 12 != 0:
             dueY += (dueM + termsdic[priv] - 1) // 12
             dueM = (dueM + termsdic[priv]) % 12
@@ -58,6 +50,5 @@ def solution(today, terms, privacies):
                     answer.append(i+1)
                 else:
                     continue
-            
-        
+                    
     return answer
