@@ -1,7 +1,6 @@
 def solution(A, B):
     doubleB = B + B
-    idx = doubleB.find(A)
-    return idx
+    return doubleB.find(A)
     
 #     doubleA = A+A
 #     print(doubleA)
