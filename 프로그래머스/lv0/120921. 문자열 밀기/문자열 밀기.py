@@ -1,4 +1,7 @@
 def solution(A, B):
+    doubleB = B + B
+    idx = doubleB.find(A)
+    return idx
     
 #     doubleA = A+A
 #     print(doubleA)
@@ -16,9 +19,9 @@ def solution(A, B):
         
 #     return answer
 
-    answer = -1
-    for i in range(0, len(A)):
-        if A[len(A)-i:] + A[:len(A)-i] == B:
-            return i
-    return answer
+    # answer = -1
+    # for i in range(0, len(A)):
+    #     if A[len(A)-i:] + A[:len(A)-i] == B:
+    #         return i
+    # return answer
     
