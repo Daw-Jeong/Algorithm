@@ -1,12 +1,5 @@
 def solution(score):
-    answer = [] 
-
-    average_score = [(score[i][0] + score[i][1])/2 for i in range(len(score))]
-    
-    sorted_average_score = sorted(average_score, reverse = True)
-      
-    for el in average_score:
-        print
-        answer.append(sorted_average_score.index(el) + 1)
-        
-    return answer
+    sum_score = [sum(score[i]) for i in range(len(score))]
+    sorted_score = sorted(sum_score, reverse = True)
+          
+    return [sorted_score.index(el) + 1 for el in sum_score]
