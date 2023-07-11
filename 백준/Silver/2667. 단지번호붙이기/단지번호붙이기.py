@@ -12,7 +12,7 @@ dx = [0, 0, -1, 1]
 dy = [1, -1, 0, 0]
 
 li = []
-def bfs(i, j, N, graph):
+def bfs(i, j, graph):
     q = deque()
     q.append((i, j))
     graph[i][j] = 0
@@ -25,7 +25,7 @@ def bfs(i, j, N, graph):
         for n in range(4):
             X = x + dx[n]
             Y = y + dy[n]
-            
+
             if 0 <= X < N and 0 <= Y < N and graph[X][Y] == 1:
                 q.append((X, Y))
                 graph[X][Y] = 0
@@ -35,7 +35,7 @@ def bfs(i, j, N, graph):
 for i in range(N):
     for j in range(N):
         if graph[i][j] == 1:
-            bfs(i, j, N, graph)
+            bfs(i, j, graph)
 
 li.sort(key = len)
 
