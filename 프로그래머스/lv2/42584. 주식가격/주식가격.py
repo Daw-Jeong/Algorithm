@@ -1,13 +1,12 @@
 def solution(prices):
-    answer = [0 for _ in range(len(prices))]
+    answer = [0] * len(prices)
     
     for i in range(len(prices)):
-        temp = prices[i]
         for l in range(i + 1 , len(prices)):
-            if prices[l] < temp:
-                answer[i] = l - i
-                break
+            answer[i] += 1
+            if prices[l] >= prices[i]:
+                continue
             else:
-                answer[i] = len(prices) - 1 - i
+                break
                 
     return answer
