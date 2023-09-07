@@ -1,8 +1,8 @@
 def solution(s):
     answer = 0
-    stack = list(s)
     temp = [0]
-    for i in stack:
+    
+    for i in s:
         if temp[-1] == i:
             temp.pop()
         else:
