@@ -21,9 +21,10 @@ def solution(begin, target, words):
             for l in range(n):
                 li[i][l] = min(li[i][l], li[i][k] + li[k][l])
         
-    print(li)
-    
-    return li[0][n - 1]
+    if li[0][n - 1] >= 1e9:
+        return 0
+    else:
+        return li[0][n - 1]
 
 def changable(word1, word2):
     cnt = 0
